@@ -1,12 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chadd M. Frasier</title>
-    <link rel="style" href="/css/styles.css">
-</head>
-<body>
-    Hello There
-</body>
+    <title>Chadd Frasier</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Chadd Frasier's Personal Website">
+    <meta name="author" content="Chadd Frasier & Bootstrap contributors">
+    <meta property="og:url" content="https://www.cefns.nau.edu/~cmf339/ChaddFrasier">
+    <meta property="og:title" content="Chadd Frasier">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Chadd Frasier, a Software Developer with a B.S. of Computer Science from Northern Arizona University">
+    <meta property="og:image" content="https://www.cefns.nau.edu/capstone/projects/CS/2019/Orion-S19/Chadd.jpg">
+    <link rel="icon" href="./imgs/cf.png" type="image/icon type">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Import Jquery with Ajax-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="./css/cfrasier.css">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .footerImg{
+        width: 8%;
+        height: auto;
+        padding: 0;
+        top:-3rem;
+        position: relative;
+      }
+      .footerImg:hover{
+        cursor:pointer;
+      }
+      
+      </style>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.href.split('?sent').length > 1){
+        alert('Email Sent to Me');
+      }
+    });
+    </script>
+
+
+  </head>
+  <body style="padding-top: 3.5rem;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <p class="navbar-brand" style="padding-top: 1rem;" >Chadd M. Frasier</p>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar" aria-controls="navBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navBar">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link disabled" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="personal.html">Personal Details</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="proDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+        Professional Details
+      </a>
+      <div class="dropdown-menu" aria-labelledby="proDropdown">
+        <a class="dropdown-item" href="professional.html">Professional Summary</a>
+        <a class="dropdown-item" href="resume.html">Resume</a>
+      </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="projDropdown" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="projDropdown">
+          <a class="dropdown-item" href="pips.html">PIPS Project</a>
+          <a class="dropdown-item" href="mockos.html">Mock OS</a>
+          <!-- <a class="dropdown-item" href="#">More Projects</a>-->
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <img class="float-right profileImage" src="imgs/chaddprofile.JPG" alt="Chadd Frasier"/>
+      <h2 class="display-4">Software Developer</h2>
+      <p>Please check out my past and future work projects.<br/>If you would like to contact me for any reason feel free.</p>
+      <p><a class="btn btn-primary btn-lg" href="email.html" role="button">Contact Me &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container" style="padding: 20px;">
+    <div class="row" style="padding: 0;">
+      <div class="col-md-4" style="margin-top:0; margin-bottom: 2%;">
+        <h2>PIPS Project</h2>
+        <p>I was brought onto the USGS Astrogeology team to head the development of the Planetary Image Publication Server.
+            <br/><br/>A server designed to fast track the publication process for geological researchers in the Astrogeology branch. 
+           I'm considered a contractor right now but soon I hope to secure a more permanent position </p>
+        <br><p><a class="btn btn-warning" href="pips.html" role="button">Read Further &raquo;</a></p>
+      </div>
+      <br>
+      <div class="col-md-4" style="margin-top:0; margin-bottom: 2%;">
+        <h2>My Interests</h2>
+        <p> 
+          I love the idea of coding on a team that creates the next big video game but thats not my only interest. I
+          have loved working with image files and big data recently. Working on the PIPS project I learned about how to manipulate images using javascript 
+          including converting them to Base64 strings for embedding images into SVG files. I would love to work with image manipulation applications in the future.
+          The simple truth is that I love all forms of innovative software and I love learning new innovative solutions to unknown problems.     
+        </p>
+      </div>
+      <div class="col-md-4" style="margin-top:0; margin-bottom: 2%;">
+        <h2>Mock Operating Systems</h2>
+        <p>
+          This was a very large project that was completed for my Operating Systems class where I implemented a Mock OS using C.
+          The system accepted a configuration file that ran a batch of different "tasks" using the proper scheduling algorithms that were given
+          to the system config file and many more Operating System functions.   
+        </p>
+        <br><p><a class="btn btn-warning" href="mockos.html" role="button">Read Further &raquo;</a></p>
+      </div>
+    </div>
+    <hr>
+  </div> 
+
+</main>
+
+<footer class="container">
+    <img class="footerImg float-right" src="imgs/gitLogo.jpg" alt="gitHub" onclick="window.location.assign('https://github.com/ChaddFrasier')" />
+    <img class="footerImg float-right" src="imgs/linkedinLogo.jpg" alt="linkedIn" onclick="window.location.assign('http://www.linkedin.com/in/ChaddFrasier')" />
+  <p>&copy; Frasier, Chadd 2019</p>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
