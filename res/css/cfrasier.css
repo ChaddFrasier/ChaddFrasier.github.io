@@ -90,6 +90,15 @@ body {
 	color: var(--font-color)
 }
 
+.mainbox-sm {
+	width: auto;
+	height: 80px;
+	margin: 0 10%;
+	text-align: left;
+	overflow: hidden;
+	color: var(--font-color)
+}
+
 .sectiontitle {
 	text-align: left;
 	font-family: Trebuchet MS, serif;
@@ -97,6 +106,16 @@ body {
 	margin: auto auto 0 auto;
 	color: var(--dark-light-accent-color);
 	text-shadow: none;
+}
+
+a.sectiontitle {
+	text-align: center;
+	margin: 0 auto 0 auto;
+	color: var(--font-color);
+	padding: 0 .5em 0 .5em;
+	text-decoration: double;
+	font-size: 1em;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .subtitle{
