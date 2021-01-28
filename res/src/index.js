@@ -12,7 +12,6 @@ const NewsData = {
     '08/17/2019': "Started drafting research methods for Machine Learning Techniques Applied to Lunar Surface Data with Dr. Kestay at the USGS.",
     '07/03/2019': "First day at the USGS as a Student Software Contractor.",
     '06/12/2019': "Graduated from Northern Arizona University with a Bachelor's of Science in Computer Science.",
-    '06/09/2018': "Assistant Teacher at Kids Coding Camp for College America."
 };
 
 // Function executes when the page loads fully
