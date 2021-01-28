@@ -18,13 +18,14 @@
     <body>
         <div class="body-holder">
             <nav id="Navbar" class="navbar">
-                <a id="AboutLink" href="/#About">About</a>
-                <a id="InterestsLink" href="/#Interests">Interests</a>
-                <a id="NewsLink" href="/#News">News</a>
+                <a id="AboutLink" href="index.html"  class="activeheader">About</a>
+                <a id="BlogLink" href="blog.html">Blog</a>
+                <a id="InterestLink" href="interests.html">Interests</a>
+                <a id="ProjectLink" href="projects.html">Projects</a>
             </nav>
             <div class="flex-box">
                 <div>
-                    <h1 class="maintitle"><i>Chadd M. Frasier</i></h1>
+                    <h2 class="maintitle"><i>Chadd M. Frasier</i></h2>
                     <h3 class="subtitle"><i><b>B.S. Computer Science</b></i></h3>
                 </div>
                 <div class="chaddimgbox">
@@ -40,9 +41,25 @@
                     <i><b>Location:</b></i> Flagstaff, AZ
                 </div> 
             </div>
-            <div id="About" class="about-mainbox">
+            <div id="CV" class="d-mainbox">
                 <div class="mainbox">
-                    <h2 class="sectiontitle"><b>About Me</b></h2>
+                    <h2 class="sectiontitle"><b>CV</b></h2>
+                    <div class="ul-contentbox">
+                        <ul id="CVlist" class="cfrasier-cv">
+                            <li><b>2020-current:</b> Contract at the USGS extended for another 350hrs to continue developing the version 2 of PIPS.</li>
+                            <br>
+                            <li><b>2019-2020:</b> Student Software Contractor for the United States Geological Survey's Astrogeology Science Center. Web Development and assisted Dr. Laszlo Kestay in researching methods of predicting Lunar Surface Scattering using Machine Learning algorithms.</li>
+                            <br>
+                            <li><b>Jun. 2018:</b> Assistant Teacher for College America Coding Camp</li>
+                            <br>
+                            <li><b>2015-2019:</b> Undergraduate degree at Northern Arizona University, studied Computer Science finishing with the senior project <i>Planetary Image Caption Writer</i> project sponsored by the USGS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="About" class="l-mainbox">
+                <div class="mainbox">
+                    <h2 class="sectiontitle"><b>History</b></h2>
                     <p class="contentbox">
                         I grew up in Northern California's wine country, the Napa Valley. I was raised by my loving and hard working mother and father who always pushed me and my two older brothers to be the best that we could be in very thing we tried and we were instilled with respect, loyalty, and determination in many aspects of our lives. My family always took particular joy in sports of any kind, from Football to Paintballing my parents were always supportive of us. When I graduated high school I decided to head to Flagstaff Arizona to become a Mechanical Engineer, but after my freshman year I switched to Computer Science and I never looked back. The complex problem solving is what drew me to the field and I love finding solutions to problems that were never considered before.
                     </p>
@@ -51,31 +68,14 @@
                     </p>
                 </div>
             </div>
-            <div id="Interests" class="interests-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle"><b>My Interests</b></h2>
-                    <p class="contentbox">
-                        I am interested in many fields of computer science including Machine Learning, Image Processing, and Cyber-Security, as well as 3D Graphics and Game Development. I love the idea of coding on a team that creates the next big video game, and recently I have loved working with geospacial image files at the USGS. Working on the PIPS project I learned about how to manipulate images using JavaScript including converting them to Base64 strings for embedding images into SVG files. This method allows me to edit and create custom images based on metadata from the images.
-                    </p>
-                    <p class="contentbox">
-                        Working at the USGS has sparked my interests to go back to school and dive deeper into the computer science ocean of innovation. I worked on a research project with Dr. Laszlo Kestay where we predicted the Surface Scattering variable of lunar mission data based on camera and lighting metadata. We could predict scattering values with up to 92% accuracy with relatively small training sets. The goal is to eventually be able to apply specific photometric corrections without using mathematical calculations and instead using a predictive AI model.
-                    </p>
-                    <p class="contentbox">
-                        Recently I have been working in UI/UX design, mainly due to the fact that I am the soul programmer on the <a href="https://github.com/ChaddFrasier/PIE/#pie" target="_blank">PIE</a> project at the USGS which is the version 2 of the PIPS server. The UI design has taken me the most time but I enjoy coding the back-end much more. Since Node.js runs asynchronously, I needed to make sure that when I am processing images with GDAL the server only responds when necessary and it needs to work synchronously with the user interface. To accomplish this the server uses JavaScript Promises to guarantee synchronous execution on the server end and then I can use response design to only respond when the image processing finishes.
-                    </p>
-                </div>
-            </div>
-            <div id="News" class="news-mainbox">
+            <div id="News" class="d-mainbox">
                 <div class="mainbox">
                     <h2 class="sectiontitle"><b>News</b></h2>
-                    <div class="news-contentbox">
-                        <ul id="NewContainerBox" class="news-ul">
+                    <div class="ul-contentbox">
+                        <ul id="NewContainerBox" class="cfrasier-ul">
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="mainbox-sm">
-                <a class="sectiontitle" href="/#Navbar"><h4>Back to Top</h4></a>
             </div>
         </div>
     </body>
