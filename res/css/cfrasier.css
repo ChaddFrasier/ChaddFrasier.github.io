@@ -86,7 +86,9 @@ nav>a:hover {
 
 .mainbox {
 	width: auto;
-	margin: 0 15%;
+	margin: 0 18%;
+	padding-bottom: 5px;
+	padding-top: 10px;
 	text-align: left;
 	overflow: hidden;
 	color: var(--font-color)
@@ -95,7 +97,7 @@ nav>a:hover {
 .mainbox-sm {
 	width: auto;
 	height: 80px;
-	margin: 0 10%;
+	margin: 0 18%;
 	text-align: left;
 	overflow: hidden;
 	color: var(--font-color)
@@ -178,12 +180,12 @@ a.sectiontitle {
 .socialbox {
 	display: flex;
 	text-align: left;
-	margin: -120px auto 20px 10%; 
+	margin: -120px auto 20px 17%; 
 }
 
 .flex-box {
 	display: flex;
-	margin: 0 10%;
+	margin: 0 18%;
 }
 
 .chaddimgbox {
