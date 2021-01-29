@@ -74,6 +74,7 @@ nav>a:hover {
 	letter-spacing: -2px;
 	line-height: 1.2;
 	margin: auto auto 0 0;
+	padding-right: 30px;
 }
 
 .d-mainbox {
@@ -86,7 +87,7 @@ nav>a:hover {
 
 .mainbox {
 	width: auto;
-	margin: 0 18%;
+	margin: 0 15%;
 	padding-bottom: 5px;
 	padding-top: 10px;
 	text-align: left;
@@ -97,7 +98,7 @@ nav>a:hover {
 .mainbox-sm {
 	width: auto;
 	height: 80px;
-	margin: 0 18%;
+	margin: 0 15%;
 	text-align: left;
 	overflow: hidden;
 	color: var(--font-color)
@@ -127,6 +128,7 @@ a.sectiontitle {
 	text-align: left;
 	font-family: Trebuchet MS, sans-serif;
 	margin: auto auto 0 10px;
+	padding-bottom: 10px;
 }
 
 .contentbox {
@@ -180,17 +182,27 @@ a.sectiontitle {
 .socialbox {
 	display: flex;
 	text-align: left;
-	margin: -120px auto 20px 17%; 
+	padding: 10px 10px;
+}
+
+.socialbox > a > img {
+	height: 75px;
 }
 
 .flex-box {
 	display: flex;
 	margin: 0 18%;
+	padding-bottom: 20px;
 }
 
 .chaddimgbox {
 	text-align: right;
 	margin: 1em 0 0 auto;
+	height: 100%;
+}
+
+.chaddimgbox > img {
+	height: 200px;
 }
 
 .contactBox {
@@ -200,13 +212,20 @@ a.sectiontitle {
 	letter-spacing: 1px;
 } 
 
+.contactBox > .line{
+	padding-bottom: 4px;
+}
+
 /* Dynamics */
 @media only screen and (max-width: 1100px)
 {
 	.socialbox {
 		display: block;
 		text-align: left;
-		margin: -120px auto 20px 5%; 
+	}
+	
+	.socialbox > a > img {
+		height: 60px;
 	}
 
 	.contactBox {
@@ -214,7 +233,11 @@ a.sectiontitle {
 		text-align: left;
 		margin: 0 auto 0 1rem;
 		letter-spacing: 1px;
-	} 
+	}
+	.maintitle {
+		font-size: 35px;
+	}
+
 }
 
 @media only screen and (max-width: 680px)
@@ -229,6 +252,10 @@ a.sectiontitle {
 		margin: 10px auto 20px 5%; 
 	}
 
+	.socialbox > a > img {
+		height: 50px;
+	}
+
 	.contactBox {
 		width: auto;
 		text-align: center;
@@ -241,9 +268,11 @@ a.sectiontitle {
 
 	.maintitle {
 		text-align: center;
+		font-size: 30px;
 	}
 
 	.subtitle {
 		text-align: center;
+		font-size: 15px;
 	}
 }
