@@ -8,6 +8,7 @@
  *      There should not be two of the same dates ever so that is why they are the keys
  */
 const NewsData = {
+    '04/16/2021': "Submitted abstract for the <i>Planetary Image Editor</i> possible publication.",
     '10/22/2020': "Contract Extension Awarded for Student Contractor position at the USGS.",
     '08/17/2019': "Started drafting research methods for Machine Learning Techniques Applied to Lunar Surface Data with Dr. Kestay at the USGS.",
     '07/03/2019': "First day at the USGS as a Student Software Contractor.",
