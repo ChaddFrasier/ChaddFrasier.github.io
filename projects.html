@@ -1,84 +1,134 @@
 ﻿<!doctype html>
 <html lang="en">
-    <head>
-        <title>Chadd Frasier | Projects</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Chadd Frasier's Projects">
-        <meta name="author" content="Chadd Frasier">
-        <meta property="og:url" content="https://chaddfrasier.github.io/projects.html">
-        <meta property="og:title" content="Chadd Frasier's Projects">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="These are the projects I have been working on recently.">
-        <meta property="og:image" content="./res/img/cficonw.png">
-        <link rel="icon" href="./res/img/cf.png" type="image/icon type">
-        <link rel="stylesheet" href="./res/css/cfrasier.css">
-    </head>
-    <body>
-        <div class="body-holder">
-            <nav id="Navbar" class="navbar">
-                <a id="AboutLink" href="index.html">About</a>
-                <a id="BlogLink" href="blog.html">Blog</a>
-                <a id="InterestLink" href="interests.html">Interests</a>
-                <a id="ProjectLink" href="projects.html" class="activeheader">Projects</a>
-            </nav>
-            <div class="flex-box">
-                <div>
-                    <h1 class="maintitle"><i>Projects</i></h1>
-                    <h3 class="subtitle"><i><b>Current & Past Projects</b></i></h3>
 
-                </div>
+<head>
+    <title>Chadd Frasier | Projects</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Chadd Frasier's Projects">
+    <meta name="author" content="Chadd Frasier">
+    <meta property="og:url" content="https://chaddfrasier.github.io/projects.html">
+    <meta property="og:title" content="Chadd Frasier's Projects">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="These are the projects I have been working on recently.">
+    <meta property="og:image" content="./res/img/cficonw.png">
+    <link rel="icon" href="./res/img/cf.png" type="image/icon type">
+    <link rel="stylesheet" href="./res/css/cfrasier.css">
+</head>
+
+<body>
+    <div class="body-holder">
+        <nav id="Navbar" class="navbar">
+            <a id="AboutLink" href="index.html">About</a>
+            <a id="BlogLink" href="blog.html">Blog</a>
+            <a id="InterestLink" href="interests.html">Interests</a>
+            <a id="ProjectLink" href="projects.html" class="activeheader">Projects</a>
+        </nav>
+        <div class="flex-box">
+            <div>
+                <h1 class="maintitle"><i>Projects</i></h1>
+                <h3 class="subtitle"><i><b>Current & Past Projects</b></i></h3>
+
             </div>
-            <div id="PIE" class="l-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">PIE</h2>
-                    <p class="contentbox">
-                        Recently I have been working in UI/UX design, mainly due to the fact that I am the soul programmer on the <a href="https://github.com/ChaddFrasier/PIE/#pie" target="_blank">PIE</a> project at the USGS which is the version 2 of the PIPS server. PIE was first thought up by Laszlo Kestay and with the help from the POW development team at the USGS it became the last connection in a web-based processing pipline that connects PILOT, POW, and PIE in a smooth workfow that removes the need for researchers to learn ISIS3 command line interface programs.
-                    </p>
-                </div>
+        </div>
+        <div id="redux-generator" class="l-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://www.npmjs.com/package/redux-feature-generator">
+                        redux-feature-generator
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    I am now the lead programmer on an OSS project that I started as a result of beginning my
+                    development into the Planetary Image Editor version 2. I found that using redux and react to make
+                    application requires making many files for each different custom UI component you want to make. I
+                    decided that I would save myself time if I wrote some scripts to do it for me. Come to find out that
+                    this idea had not been published to NPM before and I was using Node.js for the TypeScript
+                    development of PIE2 and Redux. I decided to write the scripts into a command line package and
+                    publish it to NPM. I am up to ~40 downloads a week now which I am very proud of.
+                </p>
             </div>
-            <div id="MockOS" class="d-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">Mock OS</h2>
-                    <p class="contentbox">
-                        One of the more complex projects I did in college was the <a href="https://github.com/ChaddFrasier/Simulator" target="_blank">Mock Operating System</a>. It is a fake operating system that runs text based batch files to represet fake tasks on a real OS. This project is written is pure C and uses very little pre built libraries. This project taught me the basics to compiled languages and gave me an amazing starting point to later teach myself how to program in C++ an use CMake.
-                    </p>
-                </div>
+        </div>
+        <div id="PIE" class="l-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://github.com/ChaddFrasier/PIE">
+                        PIE
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    Recently I have been working in UI/UX design, mainly due to the fact that I am the soul programmer
+                    on the PIE project at the USGS which is the version 2 of the PIPS server. PIE was first thought up by Laszlo Kestay and with
+                    the help from the POW development team at the USGS it became the last connection in a web-based
+                    processing pipeline that connects PILOT, POW, and PIE in a smooth workflow that removes the need for
+                    researchers to learn ISIS3 command line interface programs.
+                </p>
             </div>
-            <div id="Neb-usgs" class="l-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">Neb-usgs</h2>
-                    <p class="contentbox">
-                        I taught myself how to use the Nebula Compute Cluster at the USGS Astrogeology Science Center to do parallel processing of ISIS3 data files. I had such a difficult time learning it given the minimal resources at my disposal that I decided to create a repository for anyone interested in learning how to use a Slurm Workload Manager interface. <a href="https://github.com/ChaddFrasier/Neb-usgs/#Neb-usgs" target="_blank">Neb-usgs</a> is what I came up with.
-                    </p>
-                </div>
+        </div>
+        <div id="MockOS" class="d-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://github.com/ChaddFrasier/Simulator">
+                        Mock OS
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    One of the more complex projects I did in college was the Mock Operating System. It
+                    is a fake operating system that runs text based batch files to represent fake tasks on a real OS.
+                    This project is written is pure C and uses very little pre built libraries. This project taught me
+                    the basics to compiled languages and gave me an amazing starting point to later teach myself how to
+                    program in C++ an use CMake.
+                </p>
             </div>
-            <div id="planetLearn" class="d-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">planetLearn</h2>
-                    <p class="contentbox">
-                        I was asked to assist in a computer science solution to calculate surface scattering values for ISIS cube files. I decided to used machine learning to predict scattering based on camera metadata from the Lunar Reconassiance Oribitor Camera. <a href="https://github.com/ChaddFrasier/planetLearn/" target="_blank">planetLearn</a> uses algorithms from my undergraduate career as well as <i>glmnet</i> learning algorithms. These results were used in a research paper by Dr. Laszlo Kestay.
-                    </p>
-                </div>
+        </div>
+        <div id="Neb-usgs" class="l-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://github.com/ChaddFrasier/Neb-usgs">
+                        Neb-usgs
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    I taught myself how to use the Nebula Compute Cluster at the USGS Astrogeology Science Center to do
+                    parallel processing of ISIS3 data files. I had such a difficult time learning it given the minimal
+                    resources at my disposal that I decided to create a repository for anyone interested in learning how
+                    to use a Slurm Workload Manager interface. Neb-usgs is what I
+                    came up with.
+                </p>
             </div>
-            <div id="docker-pie" class="l-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">docker-pie</h2>
-                    <p class="contentbox">
-                        Docker was used often at the USGS for containerizing web applications to add an extra layer of security to outward facing web addresses that are run in house. <a href="https://github.com/ChaddFrasier/docker-pie/#docker-pie" target="_blank">docker-pie</a> is a containerized PIE server with its own installation of ISIS 3.10 and GDAL.
-                    </p>
-                </div>
+        </div>
+        <div id="planetLearn" class="d-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://github.com/ChaddFrasier/planetLearn">
+                        planetLearn
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    I was asked to assist in a computer science solution to calculate surface scattering values for ISIS
+                    cube files. I decided to used machine learning to predict scattering based on camera metadata from
+                    the Lunar Reconnaissance Orbiter Camera. planetLearn uses algorithms from my undergraduate career as well as
+                    <i>glmnet</i> learning algorithms. These results were used in a research paper by Dr. Laszlo Kestay.
+                </p>
             </div>
-            <div id="skynet-todo" class="d-mainbox">
-                <div class="mainbox">
-                    <h2 class="sectiontitle">Skynet Todo List</h2>
-                    <p class="contentbox">
-                        I wrote a Skynet Application to allow users of <a href="https://siasky.net/">Skynet</a> to connect to the server and save data in the MySky decentralized cloud. Take a look at the <a href="https://github.com/ChaddFrasier/SkyNetTodoList">code</a> or give it a <a href="https://1007oves5g6ibsduc4kbqatnfl61v101r98hcs2bogcso66fvi9c8j8.siasky.net/">try</a>. 
-                    </p>
-                </div>
+        </div>
+        <div id="docker-pie" class="l-mainbox">
+            <div class="mainbox">
+                <h2 class="sectiontitle">
+                    <a class="sectiontitle" target="_blank" href="https://github.com/ChaddFrasier/docker-pie">
+                        docker-pie
+                    </a>
+                </h2>
+                <p class="contentbox">
+                    Docker was used often at the USGS for containerizing web applications to add an extra layer of
+                    security to outward facing web addresses that are run in house. docker-pie is
+                    a containerized PIE server with its own installation of ISIS 3.10 and GDAL.
+                </p>
             </div>
         </div>
     </div>
-    </body>
-    <br>
-</html> 
+    </div>
+</body>
+<br>
+
+</html>

@@ -1,12 +1,13 @@
 :root {
-	--background-color: #0D0221;
-	--dark-accent-color: #0F084B;
-	--dark-light-accent-color: #26408B;
-	--light-accent-color: #C2E7D9;
+	--background-color: #3D0000;
+	--dark-accent-color: #950101;
+	--dark-light-accent-color: #610101;
+	--dark-primary-color: #FF0000;
+	--light-accent-color: #d72121;
 
-	--font-color: #A6CFD5;
-	--dark-content-box-color: #0e0a33;
-	--light-content-box-color: #0e0a38;
+	--font-color: #ffffff;
+	--dark-content-box-color: #d72121;
+	--light-content-box-color: #d72121;
 }
 
 body {
@@ -151,6 +152,7 @@ a.sectiontitle {
 
 .ul-contentbox {
 	padding: 5px 10px;
+	color: var(--font-color);
 }
 
 .cfrasier-ul {
@@ -163,7 +165,7 @@ a.sectiontitle {
 .cfrasier-cv {
 	border: 3.5px solid var(--dark-light-accent-color);
 	background: var(--light-accent-color);
-	color: var(--dark-accent-color);
+	color: var(--font-color);
 	border-radius: 5px 5px;
 	font-size: 15px;
 	width: 90%;
@@ -173,6 +175,7 @@ a.sectiontitle {
 
 .news-li {
 	margin: 0 0 10px 0;
+	color: var(--font-color);
 }
 
 .news-li > i {

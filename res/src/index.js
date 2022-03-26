@@ -8,6 +8,7 @@
  *      There should not be two of the same dates ever so that is why they are the keys
  */
 const NewsData = {
+    '08/07/2021': "First day starting at Microchip.",
     '06/28/2021': "Presenting at Planet Data 2021 for PIE.",
     '06/01/2021': "<i>Planetary Image Editor</i> abstract accepted to Planet Data 2021 for presentation.",
     '04/16/2021': "Submitted abstract for the <i>Planetary Image Editor</i> possible publication.",
