@@ -27,7 +27,19 @@ document.addEventListener( "DOMContentLoaded", ( e ) => {
     Object.keys(NewsData).forEach( dateKey => {
         writeHeadline( NewsContainerBox, dateKey, NewsData[dateKey]);
     });
+
+    const ppc = createInformationContainer();
+
+    document.getElementById("phonebox").appendChild(ppc)
 });
+
+function createInformationContainer(){
+    let newpre = document.createElement("div");
+
+    newpre.innerHTML = '&plus;1&dash;(707)-260&dash;5853'
+
+    return newpre;
+}
 
 /**
  * @function writeHeadline

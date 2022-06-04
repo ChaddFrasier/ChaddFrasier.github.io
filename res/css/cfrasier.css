@@ -1,13 +1,14 @@
 :root {
-	--background-color: #3D0000;
-	--dark-accent-color: #950101;
-	--dark-light-accent-color: #610101;
-	--dark-primary-color: #FF0000;
-	--light-accent-color: #d72121;
+	--background-color: #686868;
+	--dark-accent-color: #585858;
+	--dark-light-accent-color:#868686;
+	--light-primary-color: #b6b6b6;
+	--dark-primary-color: #636363;
+	--light-accent-color: #9b9b9b;
 
 	--font-color: #ffffff;
-	--dark-content-box-color: #d72121;
-	--light-content-box-color: #d72121;
+	--dark-content-box-color: #5e5e5e;
+	--light-content-box-color: #616161;
 }
 
 body {
@@ -110,7 +111,7 @@ nav>a:hover {
 	font-family: Trebuchet MS, serif;
 	letter-spacing: -0.5px;
 	margin: 10px auto auto auto;
-	color: var(--dark-light-accent-color);
+	color: var(--font-color);
 	text-shadow: none;
 }
 
@@ -122,6 +123,10 @@ a.sectiontitle {
 	text-decoration: double;
 	font-size: 1em;
 	font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a.sectiontitle:hover {
+	text-decoration: underline;
 }
 
 .subtitle{
@@ -142,12 +147,16 @@ a.sectiontitle {
 	color: var(--font-color);
 }
 
-.contentbox > a:active, .contentbox > a:visited {
+.contentbox > a:active {
+	color: var(--dark-light-accent-color);
+}
+
+.contentbox > a:visited {
 	color: var(--dark-light-accent-color);
 }
 
 .contentbox > a:hover {
-	color: var(---dark-accent-color);
+	color: var(--light-accent-color);
 }
 
 .ul-contentbox {
@@ -156,7 +165,7 @@ a.sectiontitle {
 }
 
 .cfrasier-ul {
-	border: 3.5px solid var(--light-accent-color);
+	border: 3.5px solid var(--dark-light-accent-color);
 	border-radius: 5px 5px;
 	padding: 5px 20px;
 	list-style: disc;
@@ -164,7 +173,7 @@ a.sectiontitle {
 
 .cfrasier-cv {
 	border: 3.5px solid var(--dark-light-accent-color);
-	background: var(--light-accent-color);
+	background: var(--dark-primary-color);
 	color: var(--font-color);
 	border-radius: 5px 5px;
 	font-size: 15px;
