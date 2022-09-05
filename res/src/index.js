@@ -19,13 +19,13 @@ const NewsData = {
 };
 
 // Function executes when the page loads fully
-document.addEventListener( "DOMContentLoaded", ( e ) => {
+document.addEventListener("DOMContentLoaded", (e) => {
 
     const NewsContainerBox = document.getElementById("NewContainerBox");
-    
+
     // Write the news headlines
-    Object.keys(NewsData).forEach( dateKey => {
-        writeHeadline( NewsContainerBox, dateKey, NewsData[dateKey]);
+    Object.keys(NewsData).forEach(dateKey => {
+        writeHeadline(NewsContainerBox, dateKey, NewsData[dateKey]);
     });
 
     const ppc = createInformationContainer();
@@ -33,7 +33,7 @@ document.addEventListener( "DOMContentLoaded", ( e ) => {
     document.getElementById("phonebox").appendChild(ppc)
 });
 
-function createInformationContainer(){
+function createInformationContainer() {
     let newpre = document.createElement("div");
 
     newpre.innerHTML = '&plus;1&dash;(707)-260&dash;5853'
@@ -48,7 +48,7 @@ function createInformationContainer(){
  * @param {string} line the news headline
  * @description creates a headline in the obj that was given to it
  */
-function writeHeadline( obj, date, line ) {
+function writeHeadline(obj, date, line) {
     var li = document.createElement("li"),
         datei = document.createElement("i");
 
@@ -56,7 +56,7 @@ function writeHeadline( obj, date, line ) {
     li.setAttribute("class", "news-li");
     datei.innerHTML = date;
     li.innerHTML = `${datei.outerHTML}: ${line}`;
-    
+
     // append the new list item
     obj.appendChild(li);
 }
