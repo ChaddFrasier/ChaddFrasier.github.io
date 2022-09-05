@@ -1,31 +1,30 @@
 :root {
-	--background-color: #686868;
-	--dark-accent-color: #585858;
-	--dark-light-accent-color:#868686;
-	--light-primary-color: #b6b6b6;
-	--dark-primary-color: #636363;
-	--light-accent-color: #9b9b9b;
+	--background-color: #efefef; /* main background*/
+	--font-color: #545975; /* main text color */
+	--lighter-font: #4c5971;
+	--darker-font: #3f4a60;
 
-	--font-color: #ffffff;
-	--dark-content-box-color: #5e5e5e;
-	--light-content-box-color: #616161;
+	/* Light mode colors */
+	--light-accent-color: #dfe1f0; 
+	--light-accent-gradient-1: #c1c4d9;
+	--light-accent-gradient-2: #9da0b1;
+
+	--darker-box-color: #b6b5bd;
+	--lighter-box-color: #dddde1;
+
+	--hover-link-accent: #bbbce5;
+	--active-link-accent: #6e7db6;
+
+	--switch-off-color: var(--active-link-accent);
+	--switch-on-color: var(--hover-link-accent);
 }
 
 body {
 	background: var(--background-color);
+	color: var(--font-color);
 	height: auto;
 	width: auto;
 	margin: 0 auto 0 auto;
-	color: var(--font-color);
-}
-
-.body-holder {
-	width: auto;
-	margin: auto auto;
-}
-
-p {
-	color: var(--font-color)
 }
 
 nav.navbar {
@@ -38,17 +37,13 @@ nav.navbar {
 	background: /* gradient can be an image */
     linear-gradient(
       to bottom, 
-      var(--dark-accent-color) 0%,
-      var(--dark-light-accent-color) 77%,
-      var(--dark-accent-color) 100%
+      var(--light-accent-color) 0%,
+      var(--light-accent-gradient-1) 77%,
+      var(--light-accent-gradient-2) 100%
     ) 
     bottom
     no-repeat;
   background-size:100% 5px;
-}
-
-nav>a:active {
-	text-decoration: underline;
 }
 
 nav > a {
@@ -60,13 +55,78 @@ nav > a {
 }
 
 nav>a.activeheader, nav>a.activeheader:hover {
-	color: var(--dark-light-accent-color);
+	color: var(--active-link-accent);
 	pointer-events: none;
+	text-decoration: underline;
+	font-weight: bold;
 }
 
 nav>a:hover {
 	text-decoration: underline;
-	color: var(--light-accent-color);
+	color: var(--hover-link-accent);
+}
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 35px;
+	height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--switch-off-color);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	left: 2px;
+	bottom: 2px;
+	background-color: var(--background-color);
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: var(--switch-on-color);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px var(--background-color);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(15px);
+	-ms-transform: translateX(15px);
+	transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+  
+.slider.round:before {
+	border-radius: 50%;
 }
 
 .maintitle {
@@ -80,11 +140,14 @@ nav>a:hover {
 }
 
 .d-mainbox {
-	background: var(--dark-content-box-color);
+	background: var(--darker-box-color);
+	color: var(--lighter-font) !important;
 }
 
 .l-mainbox {
-	background: var(--light-content-box-color);
+	background: var(--lighter-box-color);
+	color: var(--darker-font) !important;
+
 }
 
 .mainbox {
@@ -94,7 +157,6 @@ nav>a:hover {
 	padding-top: 10px;
 	text-align: left;
 	overflow: hidden;
-	color: var(--font-color)
 }
 
 .mainbox-sm {
@@ -103,7 +165,6 @@ nav>a:hover {
 	margin: 0 15%;
 	text-align: left;
 	overflow: hidden;
-	color: var(--font-color)
 }
 
 .sectiontitle {
@@ -111,14 +172,13 @@ nav>a:hover {
 	font-family: Trebuchet MS, serif;
 	letter-spacing: -0.5px;
 	margin: 10px auto auto auto;
-	color: var(--font-color);
 	text-shadow: none;
 }
 
 a.sectiontitle {
+	color: var(--font-color);
 	text-align: center;
 	margin: 0 auto 0 auto;
-	color: var(--font-color);
 	padding: 0 .5em 0 .5em;
 	text-decoration: double;
 	font-size: 1em;
@@ -138,7 +198,7 @@ a.sectiontitle:hover {
 }
 
 .contentbox {
-	color: var(--font-color);
+	color: inherit;
 	width: auto;
 	padding: 5px 10px -10px 10px;
 }
@@ -148,33 +208,30 @@ a.sectiontitle:hover {
 }
 
 .contentbox > a:active {
-	color: var(--dark-light-accent-color);
-}
-
-.contentbox > a:visited {
-	color: var(--dark-light-accent-color);
+	color: var(--light-accent-color);
 }
 
 .contentbox > a:hover {
-	color: var(--light-accent-color);
+	color: var(--hover-link-accent);
 }
 
 .ul-contentbox {
 	padding: 5px 10px;
-	color: var(--font-color);
+	color: inherit;
 }
 
-.cfrasier-ul {
-	border: 3.5px solid var(--dark-light-accent-color);
+.cfrasier-news {
+	border: 3.5px solid var(--darker-box-color);
+	color: inherit;
 	border-radius: 5px 5px;
 	padding: 5px 20px;
 	list-style: disc;
 }
 
 .cfrasier-cv {
-	border: 3.5px solid var(--dark-light-accent-color);
-	background: var(--dark-primary-color);
-	color: var(--font-color);
+	border: 3.5px solid var(--darker-box-color);
+	background: var(--background-color);
+	color: inherit;
 	border-radius: 5px 5px;
 	font-size: 15px;
 	width: 90%;
@@ -184,7 +241,7 @@ a.sectiontitle:hover {
 
 .news-li {
 	margin: 0 0 10px 0;
-	color: var(--font-color);
+	color: inherit;
 }
 
 .news-li > i {
@@ -203,7 +260,10 @@ a.sectiontitle:hover {
 
 .flex-box {
 	display: flex;
-	margin: 0 18%;
+	background-color: var(--darker-box-color);
+	font: var(--lighter-font) !important;
+	margin: 0 0;
+	padding: 0 18%;
 	padding-bottom: 20px;
 }
 
