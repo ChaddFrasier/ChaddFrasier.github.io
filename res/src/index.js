@@ -8,6 +8,7 @@
  *      There should not be two of the same dates ever so that is why they are the keys
  */
 const NewsData = {
+    '08/22/2022': "Technical lead for the 8bit bootloader project at MCU8 Applications.",
     '08/07/2021': "First day starting at Microchip.",
     '06/28/2021': "Presenting at Planet Data 2021 for PIE.",
     '06/01/2021': "<i>Planetary Image Editor</i> abstract accepted to Planet Data 2021 for presentation.",
@@ -30,15 +31,15 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     const ppc = createInformationContainer();
 
-    document.getElementById("phonebox").appendChild(ppc)
+    document.getElementById("p-box").appendChild(ppc)
 });
 
 function createInformationContainer() {
-    let newpre = document.createElement("div");
+    var newimage = document.createElement("img");
 
-    newpre.innerHTML = '&plus;1&dash;(707)-260&dash;5853'
+    newimage.src = './res/img/phone.jpg'
 
-    return newpre;
+    return newimage;
 }
 
 /**
