@@ -14,8 +14,8 @@
 	--darker-box-color: #e4e4e4;
 	--lighter-box-color: #f1f1f1;
 
-	--normal-link-accent: #e1e1e1;
-	--active-link-accent: #696969;
+	--normal-link-accent: #696969;
+	--active-link-accent: #e1e1e1;
 
 	--switch-off-color: var(--normal-link-accent);
 	--switch-on-color: var(--active-link-accent);
