@@ -21,7 +21,7 @@ const NewsData = {
 
 // Function executes when the page loads fully
 document.addEventListener("DOMContentLoaded", (e) => {
-
+    var DARK_COLOR_MODE = false;
     const NewsContainerBox = document.getElementById("NewContainerBox");
 
     // Write the news headlines
@@ -29,6 +29,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
         writeHeadline(NewsContainerBox, dateKey, NewsData[dateKey]);
     });
 
+    const ColorShifter = document.getElementById("bgColorShifter");
+    
+    ColorShifter.addEventListener("change", (event) => {
+        if(DARK_COLOR_MODE){
+            WhiteColorMode();
+        } else {
+            DarkColorMode();
+        }
+
+        DARK_COLOR_MODE = !DARK_COLOR_MODE;
+    })
     const ppc = createInformationContainer();
 
     document.getElementById("p-box").appendChild(ppc)
@@ -60,4 +71,18 @@ function writeHeadline(obj, date, line) {
 
     // append the new list item
     obj.appendChild(li);
+}
+
+/**
+ * TODO:
+ */
+function DarkColorMode () {
+    console.log("DARK COLOR")
+}
+
+/**
+ * TODO:
+ */
+function WhiteColorMode () {
+    console.log("WHITE COLOR")
 }
