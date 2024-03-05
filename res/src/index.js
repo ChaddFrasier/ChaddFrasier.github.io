@@ -8,8 +8,9 @@
  *      There should not be two of the same dates ever so that is why they are the keys
  */
 const NewsData = {
+    '12/18/2023': "Released 8-bit MDFU Client Library for MCC Melody.",
     '03/12/2023': "Public Release of redux-feature-generator 1.4.0.",
-    '08/22/2022': "Technical lead for the 8bit bootloader project at MCU8 Applications.",
+    '08/22/2022': "Main firmware developer on the 8bit bootloader project at MCU8 Applications.",
     '11/08/2021': "First day starting at Microchip.",
     '06/28/2021': "Presenting at Planet Data 2021 for PIE.",
     '06/01/2021': "<i>Planetary Image Editor</i> abstract accepted to Planet Data 2021 for presentation.",
