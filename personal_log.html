@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Chadd's Master Terminal</title>
 <link rel="stylesheet" type="text/css" href="res/css/fallout.css">
+<script src="res/src/controls.js"></script>
+<script src="res/src/index.js"></script>
 </head>
 <body>
 
@@ -44,27 +46,14 @@ const image = document.querySelector('.character-img');
 
 let i = 0;
 
-function typeWriter(text, element, callback) {
-  let index = 0;
-  function typeChar() {
-    if (index < text.length) {
-      element.textContent += text[index];
-      index++;
-      setTimeout(typeChar, 15); // typing speed
-    } else if (callback) {
-      callback();
-    }
-  }
-  typeChar();
-}
-
 // Start typing main text
-typeWriter(mainText, screen, () => {
+typeWriter(mainText, screen, 15, () => {
   // After main text, type menu items one by one
   function typeMenuItem(index) {
     if (index >= menuItems.length) {
+      // Do not show the image on screen until menu items have been typed
       image.style.display = 'block';
-      initMenu(); // initialize menu interactivity
+      initMenu();
       return;
     }
 
@@ -72,7 +61,7 @@ typeWriter(mainText, screen, () => {
     itemDiv.className = 'menu-item';
     menu.appendChild(itemDiv);
 
-    typeWriter(menuItems[index][0], itemDiv, () => {
+    typeWriter(menuItems[index][0], itemDiv, 15, () => {
       typeMenuItem(index + 1);
     });
   }
@@ -91,23 +80,10 @@ function initMenu() {
 
   updateHighlight();
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowDown') {
-      current = (current + 1) % items.length;
-      updateHighlight();
-    }
-    else if (e.key === 'ArrowUp') {
-      current = (current - 1 + items.length) % items.length;
-      updateHighlight();
-    }
-    else if (e.key === 'Enter') {
-      const link = items[current].dataset.link;
-      if (link) window.location.href = link;
-    }
-  });
+  enableContentPageControls();
 
   items.forEach((el, i) => {
-    el.dataset.link = menuItems[i][1]; // simple demo link
+    el.dataset.link = menuItems[i][1];
     el.addEventListener('mouseover', () => {
       current = i;
       updateHighlight();
