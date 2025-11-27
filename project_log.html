@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chadd's Master Terminal</title>
+<link rel="stylesheet" type="text/css" href="res/css/fallout.css">
+</head>
+<body>
+
+<div class="terminal">
+  <div class="sweep-line"></div>
+  <div id="screen"></div>
+  <img src="res/img/chadd-character-model-programming.png" class="character-img" alt="Chadd Character" />
+  <div class="menu"></div>
+</div>
+
+<script>
+const mainText = `> OPENING PROJECT LOG...
+
+> PROJECT DATA DOWNLOAD COMPLETED
+`;
+
+const menuItems = [
+  ["8-Bit MDFU Client Library", "https://www.npmjs.com/package/@mchp-mcc/mdfu-client-8bit"],
+  ["Planetary Image Editor", "https://github.com/ChaddFrasier/PIE/tree/master"],
+  //["OS Simulator", "https://github.com/ChaddFrasier/Simulator"],
+  ["Main Menu", "terminal.html"],
+];
+
+const screen = document.getElementById('screen');
+const menu = document.querySelector('.menu');
+const image = document.querySelector('.character-img');
+
+let i = 0;
+
+function typeWriter(text, element, callback) {
+  let index = 0;
+  function typeChar() {
+    if (index < text.length) {
+      element.textContent += text[index];
+      index++;
+      setTimeout(typeChar, 15); // typing speed
+    } else if (callback) {
+      callback();
+    }
+  }
+  typeChar();
+}
+
+// Start typing main text
+typeWriter(mainText, screen, () => {
+  // After main text, type menu items one by one
+  function typeMenuItem(index) {
+    if (index >= menuItems.length) {
+      image.style.display = 'block';
+      initMenu(); // initialize menu interactivity
+      return;
+    }
+
+    const itemDiv = document.createElement('div');
+    itemDiv.className = 'menu-item';
+    menu.appendChild(itemDiv);
+
+    typeWriter(menuItems[index][0], itemDiv, () => {
+      typeMenuItem(index + 1);
+    });
+  }
+
+  typeMenuItem(0);
+});
+
+function initMenu() {
+  const items = Array.from(document.querySelectorAll('.menu-item'));
+  let current = 0;
+
+  function updateHighlight() {
+    // TODO: Check to see if anything is already selected and ignore this logic if that is the case
+    items.forEach((el, i) => el.classList.toggle('selected', i === current));
+  }
+
+  updateHighlight();
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') {
+      current = (current + 1) % items.length;
+      updateHighlight();
+    }
+    else if (e.key === 'ArrowUp') {
+      current = (current - 1 + items.length) % items.length;
+      updateHighlight();
+    }
+    else if (e.key === 'Enter') {
+      const link = items[current].dataset.link;
+      if (link) {
+          if(current != items.length - 1){
+            window.open(link, "_blank");
+          } else {
+            window.location.href = link;
+          }
+        }
+      }
+  });
+
+  items.forEach((el, i) => {
+    el.dataset.link = menuItems[i][1]; // simple demo link
+    if(i != menuItems.length - 1)
+    {
+      // For any link on this page other than the main menu, open in a new tab
+    }
+    el.addEventListener('mouseover', () => {
+      current = i;
+      updateHighlight();
+    });
+    if(i != menuItems.length - 1){
+      el.addEventListener('click', () => {
+        window.open(el.dataset.link, "_blank");
+      });
+    } else {
+      el.addEventListener('click', () => {
+        window.location.href = el.dataset.link;
+      });
+    }
+    
+  });
+}
+</script>
+
+</body>
+</html>
