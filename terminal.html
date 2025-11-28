@@ -73,7 +73,8 @@ function initMenu() {
       
   }
 
-  enableDefaultPageControls();
+  enableDefaultPageControls(items);
+  
   items.forEach((el, i) => {
     el.dataset.link = menuItems[i][1];
     el.addEventListener('mouseover', () => {
