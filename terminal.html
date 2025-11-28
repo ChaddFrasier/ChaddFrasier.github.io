@@ -12,11 +12,11 @@
 
 <div class="terminal">
   <div class="sweep-line"></div>
-  <div id="screen"></div>
-
-  <img src="res/img/chadd-character-model-transparent.png" class="character-img" alt="Chadd Character" />
-  
+  <div id="screen"></div>  
   <div class="menu"></div>
+  <div class="image-container">
+    <img src="res/img/chadd-character-model-transparent.png" class="character-img" alt="Chadd Character" />
+  </div>
 </div>
 
 <script>
@@ -67,14 +67,13 @@ function initMenu() {
   let current = 0;
 
   function updateHighlight() {
-    // TODO: Check to see if anything is already selected and ignore this logic if that is the case
-    items.forEach((el, i) => el.classList.toggle('selected', i === current));
+    items.forEach((el, i) => {
+      el.classList.toggle('selected', i === current)
+    });
+      
   }
 
-  updateHighlight();
-
   enableDefaultPageControls();
-
   items.forEach((el, i) => {
     el.dataset.link = menuItems[i][1];
     el.addEventListener('mouseover', () => {
@@ -84,6 +83,14 @@ function initMenu() {
     el.addEventListener('click', () => {
       window.location.href = el.dataset.link;
     });
+  });
+
+  items.forEach((el, i) => {
+    var validSelection = el.classList.contains('selected');
+    if(validSelection){
+      current = i;
+      updateHighlight();
+    }
   });
 }
 </script>

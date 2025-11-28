@@ -12,9 +12,12 @@
 
 <div class="terminal">
   <div class="sweep-line"></div>
-  <img src="res/img/chadd-character-model-saying-hello.png" class="character-img" alt="Chadd Character" />
   <div id="screen"></div>
+  <div id="screen-wrapped"></div>
   <div class="menu"></div>
+  <div class="image-container">
+    <img src="res/img/chadd-character-model-saying-hello.png" class="character-img" alt="Chadd Character" />
+  </div>
 </div>
 
 <script>
@@ -25,16 +28,19 @@ const mainText = `Opening Personal Log...
 Name: Chadd Frasier
 Title: Software / Embedded Firmware Engineer
 
+
+
 Description:
-------------- 
-    With a background spanning web application development, embedded firmware design, and security-focused MCU engineering,
+-------------
+`;
+
+const wrappedText = `With a background spanning web application development, embedded firmware design, and security-focused MCU engineering,
     he is an engineer uniquely equipped to solve complex software and hardware challenges in a creative and efficient way.
     From leading development of Microchip’s 8-bit MDFU Client library and helping shaping a cross-architecture device firmware
     update protocol, to building secure HSM-backed Root-of-Trust firmware and SPAs for scientific analysis, he brings a proven ability
     to learn rapidly and deliver across a wide range of disciplines. His work spanning full SDLC ownership, TypeScript UI and
     C middleware development, Python test-system design, and cross-disciplinary collaboration highlights an adaptability that makes
-    him an asset to hardware teams and a reliable contributor to any software project.
-`;
+    him an asset to hardware teams and a reliable contributor to any software project.`
 
 const menuItems = [
   ["Main Menu", "terminal.html"],
@@ -43,6 +49,7 @@ const menuItems = [
 const screen = document.getElementById('screen');
 const menu = document.querySelector('.menu');
 const image = document.querySelector('.character-img');
+const wrappedTextScreen = document.getElementById("screen-wrapped");
 
 let i = 0;
 
@@ -57,12 +64,14 @@ typeWriter(mainText, screen, 15, () => {
       return;
     }
 
-    const itemDiv = document.createElement('div');
-    itemDiv.className = 'menu-item';
-    menu.appendChild(itemDiv);
+    typeWriter(wrappedText, wrappedTextScreen, 5, () => {
+      const itemDiv = document.createElement('div');
+      itemDiv.className = 'menu-item';
+      menu.appendChild(itemDiv);
 
-    typeWriter(menuItems[index][0], itemDiv, 15, () => {
-      typeMenuItem(index + 1);
+      typeWriter(menuItems[index][0], itemDiv, 15, () => {
+        typeMenuItem(index + 1);
+      });
     });
   }
 
@@ -74,7 +83,6 @@ function initMenu() {
   let current = 0;
 
   function updateHighlight() {
-    // TODO: Check to see if anything is already selected and ignore this logic if that is the case
     items.forEach((el, i) => el.classList.toggle('selected', i === current));
   }
 
@@ -91,6 +99,14 @@ function initMenu() {
     el.addEventListener('click', () => {
       window.location.href = el.dataset.link;
     });
+  });
+
+  items.forEach((el, i) => {
+    var validSelection = el.classList.contains('selected');
+    if(validSelection){
+      current = i;
+      updateHighlight();
+    }
   });
 }
 </script>
