@@ -119,7 +119,7 @@ html, body {
 
 /* Medium screens — adjust font + reduce padding */
 @media (max-width: 1024px) {
-  terminal {
+  .terminal {
     overflow-y: auto;
   }
   #screen {
@@ -149,7 +149,7 @@ html, body {
 
 /* Small phones — move character to bottom, center it */
 @media (max-width: 800px) {
-  terminal {
+  .terminal {
     overflow-y: auto;
   }
   #screen {
