@@ -6,6 +6,9 @@ html, body {
     font-family: monospace;
     color: #33ff55;
     overflow: hidden;
+    box-shadow:
+      inset 0 0 25px rgba(0,255,60,0.2),
+      inset 0 0 60px rgba(0,255,60,0.1);
   }
 
   .terminal {
@@ -116,8 +119,8 @@ html, body {
 
 /* Medium screens — adjust font + reduce padding */
 @media (max-width: 1024px) {
-  .terminal {
-    overflow-y: hidden;
+  body {
+    overflow-y: auto;
   }
   #screen {
     padding: 16px;
@@ -146,8 +149,8 @@ html, body {
 
 /* Small phones — move character to bottom, center it */
 @media (max-width: 800px) {
-  .terminal {
-    overflow-y: hidden;
+  body {
+    overflow-y: auto;
   }
   #screen {
     padding: 12px;
@@ -182,8 +185,8 @@ html, body {
 
 /* Extra-small devices (very small phones) */
 @media (max-width: 420px) {
-  .terminal {
-    overflow-y: hidden;
+  body {
+    overflow-y: auto;
   }
   #screen {
     font-size: 13px;
