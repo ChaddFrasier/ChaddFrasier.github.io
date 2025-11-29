@@ -139,6 +139,9 @@ html, body {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
   }
+  .sweep-line {
+    animation: sweep 4s linear infinite;
+  }
 }
 
 /* Small phones — move character to bottom, center it */
@@ -172,6 +175,9 @@ html, body {
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
   }
+  .sweep-line {
+    animation: sweep 4s linear infinite;
+  }
 }
 
 /* Extra-small devices (very small phones) */
@@ -200,5 +206,8 @@ html, body {
     display: flex; /* Make the parent a flex container */
     justify-content: center; /* Center items horizontally */
     align-items: center; /* Center items vertically */
+  }
+  .sweep-line {
+    animation: sweep 4s linear infinite;
   }
 }
